@@ -55,7 +55,7 @@ childhood.0001 = {
 	}
 
 	theme = seduction
-	override_background = { reference = garden }
+	override_background = { event_background = garden }
 	
 	left_portrait = {
 		character = root
@@ -368,7 +368,7 @@ childhood.0003 = {
 		}
 	}
 	theme = friendly
-	override_background = { reference = corridor_day }
+	override_background = { event_background = corridor_day }
 	left_portrait = {
 		character = root
 		animation = ecstasy
@@ -824,7 +824,7 @@ childhood.0005 = {
 		desc = childhood.0006.end
 	}
 	theme = unfriendly
-	override_background = { reference = corridor_night }
+	override_background = { event_background = corridor_night }
 	left_portrait = {
 		character = root
 		animation = sadness
@@ -1750,7 +1750,7 @@ childhood.0012 = {
 	title = childhood.0012.t
 	desc = childhood.0012.desc
 	theme = friendly
-	override_background = { reference = garden }
+	override_background = { event_background = garden }
 	
 	left_portrait = {
 		character = root
@@ -1776,7 +1776,7 @@ childhood.0012 = {
 
 	option = {
 		name = childhood.0012.a
-		
+
 		scope:crush_holder = {
 			send_interface_toast = {
 				title = crush_returned
@@ -1788,7 +1788,7 @@ childhood.0012 = {
 						}
 						set_relation_crush = scope:crush_holder
 					}
-					#[ToT]
+
 					hidden_effect = {
 						if = {
 							limit = {
@@ -1801,17 +1801,17 @@ childhood.0012 = {
 							replace_trick_with_trait_rank = { TRAIT = physique POS = good NEG = bad }
 						}
 					}
-					#[/ToT]
 				}
 			}
 		}
-		
+
 		stress_impact = {
 			celibate = minor_stress_impact_gain
 			chaste = minor_stress_impact_gain
 			shy = minor_stress_impact_gain
 			paranoid = minor_stress_impact_gain
 		}
+
 		ai_chance = {
 			base = 100
 			modifier = {
@@ -1821,7 +1821,6 @@ childhood.0012 = {
 					has_trait = celibate
 				}
 			}
-			#[ToT]
 			modifier = {
 				scope:crush_holder = { has_character_flag = beauty_good_1 }
 				add = 10
@@ -1834,8 +1833,8 @@ childhood.0012 = {
 				scope:crush_holder = { has_character_flag = beauty_good_3 }
 				add = 30
 			}
-			#[/ToT]
 		}
+
 	}
 	option = {
 		name = childhood.0012.b
@@ -1843,7 +1842,7 @@ childhood.0012 = {
 			name = unrequited_crush
 			value = scope:crushed_crush
 		}
-		
+
 		scope:crush_holder = {
 			if = {
 				limit = {
@@ -1891,7 +1890,7 @@ childhood.0012 = {
 			lustful = minor_stress_impact_gain
 			gregarious = minor_stress_impact_gain
 		}
-		#[ToT]
+
 		hidden_effect = {
 			if = {
 				limit = {
@@ -1904,7 +1903,6 @@ childhood.0012 = {
 				replace_trick_with_trait_rank = { TRAIT = physique POS = bad NEG = good }
 			}
 		}
-		#[/ToT]
 		ai_chance = {
 			base = 100
 			modifier = {
@@ -1914,7 +1912,7 @@ childhood.0012 = {
 					has_trait = gregarious
 				}
 			}
-			#[ToT]
+
 			modifier = {
 				scope:crush_holder = { has_character_flag = beauty_bad_1 }
 				add = 10
@@ -1927,7 +1925,6 @@ childhood.0012 = {
 				scope:crush_holder = { has_character_flag = beauty_bad_3 }
 				add = 30
 			}
-			#[/ToT]
 		}
 	}
 }
@@ -2368,7 +2365,7 @@ childhood.1000 = {
 	title = childhood.1000.t
 	desc = childhood.1000.desc
 	theme = seduction
-	override_background = { reference = garden }
+	override_background = { event_background = garden }
 	left_portrait = {
 		character = root
 		animation = love
@@ -2514,7 +2511,7 @@ childhood.1001 = {
 		}
 	}
 	theme = unfriendly
-	override_background = { reference = courtyard }
+	override_background = { event_background = courtyard }
 	left_portrait = {
 		character = root
 		animation = stress
@@ -2526,7 +2523,7 @@ childhood.1001 = {
 	lower_center_portrait = scope:adult_friend
 
 	cooldown = { years = 3 }
-	
+
 	trigger = {
 		any_relation = {
 			type = bully
@@ -2539,7 +2536,7 @@ childhood.1001 = {
 			diplomacy >= scope:bully_check.diplomacy
 		}
 	}
-	
+
 	immediate = {
 		play_music_cue = "mx_cue_stress"
 		random_relation = {
@@ -2662,7 +2659,7 @@ childhood.1001 = {
 			}
 		}
 	}
-	
+
 	option = {
 		name = childhood.1001.b
 		trigger = {
@@ -2701,7 +2698,6 @@ childhood.1001 = {
 				}
 			}
 		}
-		
 		stress_impact = {
 			shy = major_stress_impact_gain
 			rowdy = miniscule_stress_impact_gain
@@ -2732,7 +2728,7 @@ childhood.1001 = {
 				add_trait = depressed_1
 			}
 		}
-		
+
 		stress_impact = {
 			shy = major_stress_impact_gain
 			rowdy = miniscule_stress_impact_gain
@@ -2875,7 +2871,7 @@ childhood.1002 = {
 	}
 	theme = family
 	
-	override_background = { reference = garden }
+	override_background = { event_background = garden }
 	left_portrait = {
 		character = root
 		
@@ -3116,7 +3112,7 @@ childhood.1004 = {
 	desc = childhood.1004.desc
 	theme = education
 	
-	override_background = { reference = bedchamber }
+	override_background = { event_background = bedchamber }
 	left_portrait = {
 		character = root
 		animation = stress
@@ -3413,7 +3409,7 @@ childhood.1006 = {
 	title = childhood.1006.t
 	desc = childhood.1006.desc
 	theme = education
-	override_background = { reference = bedchamber }
+	override_background = { event_background = bedchamber }
 	
 	left_portrait = {
 		character = root
@@ -3595,7 +3591,7 @@ childhood.1007 = {
 	}
 	theme = unfriendly
 	
-	override_background = { reference = garden }
+	override_background = { event_background = garden }
 	
 	left_portrait = {
 		character = root
@@ -3823,7 +3819,7 @@ childhood.1008 = {
 		}
 	}
 	theme = unfriendly
-	override_background = { reference = bp1_kitchen_western }
+	override_background = { event_background = bp1_kitchen_western }
 	
 	left_portrait = {
 		character = root
@@ -4210,7 +4206,7 @@ childhood.1009 = {
 		desc = childhood.1009.end
 	}
 	theme = friendly
-	override_background = { reference = corridor_day }
+	override_background = { event_background = corridor_day }
 	
 	left_portrait = {
 		character = root
@@ -4353,7 +4349,7 @@ childhood.1010 = {
 		}
 	}
 	theme = seduction
-	override_background = { reference = corridor_day }
+	override_background = { event_background = corridor_day }
 	
 	left_portrait = {
 		character = root
@@ -4621,7 +4617,7 @@ childhood.1011 = {
 		}
 	}
 	theme = seduction
-	override_background = { reference = garden }
+	override_background = { event_background = garden }
 	
 	left_portrait = {
 		character = root
@@ -5132,7 +5128,7 @@ childhood.1012 = {
 		}
 	}
 	theme = education
-	override_background = { reference = sitting_room }
+	override_background = { event_background = sitting_room }
 	
 	left_portrait = {
 		character = root
@@ -5231,7 +5227,7 @@ childhood.1013 = {
 	desc = childhood.1013.desc
 	theme = unfriendly
 	
-	override_background = { reference = alley_day }
+	override_background = { event_background = alley_day }
 	
 	left_portrait = {
 		character = root
@@ -5334,8 +5330,8 @@ childhood.1014 = {
 	title = childhood.1014.t
 	desc = childhood.1014.desc
 	theme = unfriendly
-	
-	override_background = { reference = alley_day }
+
+	override_background = { event_background = alley_day }
 	
 	left_portrait = {
 		character = root
@@ -5726,7 +5722,7 @@ childhood.1016 = {
 	desc = childhood.1016.desc
 	theme = education
 	
-	override_background = { reference = courtyard }
+	override_background = { event_background = courtyard }
 	
 	left_portrait = {
 		character = root
@@ -6041,7 +6037,7 @@ childhood.1017 = {
 	desc = childhood.1017.desc
 	theme = education
 	
-	override_background = { reference = council_chamber }
+	override_background = { event_background = council_chamber }
 	
 	left_portrait = {
 		character = root
@@ -6305,7 +6301,7 @@ childhood.1018 = {
 	desc = childhood.1018.desc
 	theme = education
 	
-	override_background = { reference = council_chamber }
+	override_background = { event_background = council_chamber }
 	
 	left_portrait = {
 		character = root
@@ -6876,7 +6872,7 @@ childhood.2001 = {
 	}
 	theme = friendly
 	
-	override_background = { reference = terrain_scope }
+	override_background = { event_background = terrain_scope }
 	
 	left_portrait = {
 		character = root
@@ -7081,7 +7077,7 @@ childhood.2002 = {
 	desc = childhood.2002.desc
 	theme = education
 	
-	override_background = { reference = terrain_scope }
+	override_background = { event_background = terrain_scope }
 	
 	left_portrait = {
 		character = root
@@ -7188,7 +7184,7 @@ childhood.2003 = {
 		desc = childhood.2003.desc_ending
 	}
 	theme = friendly
-	override_background = { reference = terrain_scope }
+	override_background = { event_background = terrain_scope }
 	
 	left_portrait = {
 		character = root
@@ -7391,7 +7387,7 @@ childhood.2004 = {
 	desc = childhood.2004.desc
 	theme = education
 	
-	override_background = { reference = terrain_scope }
+	override_background = { event_background = terrain_scope }
 	
 	left_portrait = {
 		character = root
@@ -7482,7 +7478,7 @@ childhood.2005 = {
 	desc = childhood.2005.desc
 	theme = education
 	
-	override_background = { reference = terrain_scope }
+	override_background = { event_background = terrain_scope }
 	
 	left_portrait = {
 		character = root
@@ -7548,7 +7544,7 @@ childhood.2006 = {
 	desc = childhood.2006.desc
 	theme = education
 	
-	override_background = { reference = terrain_scope }
+	override_background = { event_background = terrain_scope }
 	
 	left_portrait = {
 		character = root
