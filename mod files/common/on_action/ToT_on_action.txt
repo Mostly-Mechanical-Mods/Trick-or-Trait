@@ -6,29 +6,14 @@
 
 on_game_start_trick_or_trait = {
 	effect = {
-		ToT_set_trick_trait_equivalence = { TRAIT = physique_bad_1 }
-		ToT_set_trick_trait_equivalence = { TRAIT = physique_bad_2 }
-		ToT_set_trick_trait_equivalence = { TRAIT = physique_bad_3 }
-		ToT_set_trick_trait_equivalence = { TRAIT = physique_good_1 }
-		ToT_set_trick_trait_equivalence = { TRAIT = physique_good_2 }
-		ToT_set_trick_trait_equivalence = { TRAIT = physique_good_3 }
-		ToT_set_trick_trait_equivalence = { TRAIT = intellect_bad_1 }
-		ToT_set_trick_trait_equivalence = { TRAIT = intellect_bad_2 }
-		ToT_set_trick_trait_equivalence = { TRAIT = intellect_bad_3 }
-		ToT_set_trick_trait_equivalence = { TRAIT = intellect_good_1 }
-		ToT_set_trick_trait_equivalence = { TRAIT = intellect_good_2 }
-		ToT_set_trick_trait_equivalence = { TRAIT = intellect_good_3 }
-		ToT_set_trick_trait_equivalence = { TRAIT = beauty_bad_1 }
-		ToT_set_trick_trait_equivalence = { TRAIT = beauty_bad_2 }
-		ToT_set_trick_trait_equivalence = { TRAIT = beauty_bad_3 }
-		ToT_set_trick_trait_equivalence = { TRAIT = beauty_good_1 }
-		ToT_set_trick_trait_equivalence = { TRAIT = beauty_good_2 }
-		ToT_set_trick_trait_equivalence = { TRAIT = beauty_good_3 }
-
 		every_living_character = {
 			limit = {
 				age < 16
-				has_trait_with_flag = ToT_trait
+				OR = {
+					parent_has_genetic_trait = yes
+					num_of_good_genetic_traits > 0
+					num_of_bad_genetic_traits > 0
+				}
 			}
 			replace_trait_with_trick = { TRAIT = physique_bad_1 }
 			replace_trait_with_trick = { TRAIT = physique_bad_2 }

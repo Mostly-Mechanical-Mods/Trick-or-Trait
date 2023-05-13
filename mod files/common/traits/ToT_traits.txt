@@ -3,7 +3,7 @@
 ############### Physical Trick ##############
 # Beauty (-1) - Homely
 beauty_bad_1_trick = {
-	flag = ToT_trick
+	
 	group = beauty_bad_trick
 	level = 1
 	
@@ -30,7 +30,7 @@ beauty_bad_1_trick = {
 
 # Beauty (-2) - Ugly
 beauty_bad_2_trick = {
-	flag = ToT_trick
+	
 	group = beauty_bad_trick
 	level = 2
 	
@@ -57,7 +57,7 @@ beauty_bad_2_trick = {
 
 # Beauty (-3) - Hideous
 beauty_bad_3_trick = {
-	flag = ToT_trick
+	
 	group = beauty_bad_trick
 	level = 3
 	
@@ -84,7 +84,7 @@ beauty_bad_3_trick = {
 
 # Beauty (+1) - Comely
 beauty_good_1_trick = {
-	flag = ToT_trick
+	
 	group = beauty_good_trick
 	level = 1
 
@@ -112,7 +112,7 @@ beauty_good_1_trick = {
 
 # Beauty (+2) - Pretty (f) / Handsome (m)
 beauty_good_2_trick = {
-	flag = ToT_trick
+	
 	# pretty if female
 	# handsome if male
 
@@ -155,7 +155,7 @@ beauty_good_2_trick = {
 
 # Beauty (+3) - Beautiful
 beauty_good_3_trick = {
-	flag = ToT_trick
+
 	group = beauty_good_trick
 	level = 3
 	
@@ -183,7 +183,7 @@ beauty_good_3_trick = {
 
 # Intellect (-1) - Slow
 intellect_bad_1_trick = {
-	flag = ToT_trick
+	
 	group = intellect_bad_trick
 	level = 1	
 
@@ -221,7 +221,7 @@ intellect_bad_1_trick = {
 
 # Intellect (-2) - Stupid
 intellect_bad_2_trick = {
-	flag = ToT_trick
+	
 	group = intellect_bad_trick
 	level = 2
 
@@ -258,7 +258,7 @@ intellect_bad_2_trick = {
 }
 # Intellect (-3) - Imbecile
 intellect_bad_3_trick = {
-	flag = ToT_trick
+	
 	group = intellect_bad_trick
 	level = 3
 
@@ -296,7 +296,7 @@ intellect_bad_3_trick = {
 
 # Intellect (+1) - Quick
 intellect_good_1_trick = {
-	flag = ToT_trick
+
 	group = intellect_good_trick
 	level = 1
 	
@@ -335,7 +335,7 @@ intellect_good_1_trick = {
 
 # Intellect (+2) - Intelligent
 intellect_good_2_trick = {
-	flag = ToT_trick
+
 	group = intellect_good_trick
 	level = 2
 	
@@ -374,7 +374,7 @@ intellect_good_2_trick = {
 
 # Intellect (+3) - Genius
 intellect_good_3_trick = {
-	flag = ToT_trick
+
 	group = intellect_good_trick
 	level = 3
 	
@@ -413,7 +413,7 @@ intellect_good_3_trick = {
 
 # Physique (-1) - Delicate
 physique_bad_1_trick = {
-	flag = ToT_trick
+	
 	group = physique_bad_trick
 	level = 1
 
@@ -440,7 +440,7 @@ physique_bad_1_trick = {
 
 # Physique (-2) - Frail
 physique_bad_2_trick = {
-	flag = ToT_trick
+
 	group = physique_bad_trick
 	level = 2
 	
@@ -467,7 +467,7 @@ physique_bad_2_trick = {
 
 # Physique (-3) - Feeble
 physique_bad_3_trick = {
-	flag = ToT_trick
+
 	group = physique_bad_trick
 	level = 3
 	
@@ -494,7 +494,7 @@ physique_bad_3_trick = {
 
 # Physique (+1) - Hale
 physique_good_1_trick = {
-	flag = ToT_trick
+
 	group = physique_good_trick
 	level = 1
 	
@@ -522,7 +522,7 @@ physique_good_1_trick = {
 
 # Physique (+2) - Robust
 physique_good_2_trick = {
-	flag = ToT_trick
+
 	group = physique_good_trick
 	level = 2
 	
@@ -550,7 +550,7 @@ physique_good_2_trick = {
 
 # Physique (+3) - Amazonian (f) / Herculean (m)
 physique_good_3_trick = {
-	flag = ToT_trick
+
 	# amazonian if female
 	# herculean if male
 
@@ -617,6 +617,7 @@ strong_trick = {
 }
 
 shrewd_trick = {
+	index = 380
 
 	physical = yes
 	
