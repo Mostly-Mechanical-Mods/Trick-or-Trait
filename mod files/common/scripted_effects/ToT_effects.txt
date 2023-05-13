@@ -266,3 +266,70 @@ coming_of_age_replace_trick_with_trait = {
 	coming_of_age_add_trait = { TRAIT = strong }
 	coming_of_age_add_trait = { TRAIT = weak }
 }
+
+
+# NEW
+
+ToT_set_trick_trait_equivalence = {
+	random_ruler = {
+		create_story = {
+			type = ToT_story
+			save_scope_as = ToT_story
+		}
+	}
+	scope:ToT_story = {
+		set_variable = {
+			name = trait
+			value = trait:$TRAIT$
+		}
+		set_variable = {
+			name = trick
+			value = trait:$TRAIT$_trick
+		}
+		add_to_global_variable_list = {
+			name = ToT_trait_equivalence
+			target = this
+		}
+	}
+}
+
+ToT_replace_trait_with_trick = {
+	if = {
+		limit = {
+			exists = mother
+			mother = { has_trait = $TRAIT$ }
+		}
+		add_trait = $TRAIT$_trick
+		set_variable = {
+			name = $TRAIT$_trick
+			value = mother
+		}
+	}
+	else_if = {
+		limit = {
+			exists = father
+			father = { has_trait = $TRAIT$ }
+		}
+		add_trait = $TRAIT$_trick
+		set_variable = {
+			name = $TRAIT$_trick
+			value = father
+		}
+	}
+	# if = {
+	# 	limit = {
+	# 		exists = real_father
+	# 		real_father = { has_trait = $TRAIT$ }
+	# 		trigger_if = {
+	# 			limit = { exists = father }
+	# 			NOT = { father = real_father }
+	# 		}
+	# 	}
+	# 	make_trait_inactive = $TRAIT$_trick
+	# }
+	if = {
+		limit = { has_trait = $TRAIT$ }
+		remove_trait = $TRAIT$
+		add_character_flag = $TRAIT$
+	}
+}

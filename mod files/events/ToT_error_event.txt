@@ -50,6 +50,9 @@ trick_or_treat_error.0001 = {
 		has_variable = dull_trick
 		has_variable = strong_trick
 		has_variable = weak_trick
+		has_variable = trait
+		has_variable = trick
+		has_variable = ToT_trait_equivalence
 	}
 }
 
