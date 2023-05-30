@@ -3277,6 +3277,7 @@ coming_of_age.2001 = {
 coming_of_age.3000 = {
 	hidden = yes
 	trigger = {
+		has_dlc = tours_and_tournaments
 		exists = liege
 		liege = {
 			any_active_accolade = {
