@@ -1110,6 +1110,44 @@ childhood.0005 = {
 					right_icon = scope:bully
 					add_martial_skill = 2
 					add_prowess_skill = 2
+					if = {
+						limit = {
+							scope:bully = {
+								any_close_family_member = {
+									exists = this
+									is_alive = yes
+								}
+							}
+						}
+						scope:bully = {
+							every_close_family_member = {
+								custom = every_family_member_tt
+								add_opinion = {
+									target = root
+									modifier = accidentally_killed_family_opinion
+									opinion = -40
+								}
+							}
+						}
+					}
+					if = {
+						limit = {
+							OR = {
+								liege = scope:bully
+								scope:bully = {
+									any_close_family_member = {
+										exists = this
+										is_alive = yes
+										this = root.liege
+									}
+								}
+							}
+						}
+						rightfully_imprison_character_less_verbose_effect = {
+							TARGET = root
+							IMPRISONER = root.liege
+						}
+					}
 					scope:bully = {
 						death = {
 							death_reason = death_beaten
@@ -2503,7 +2541,7 @@ childhood.1001 = {
 					trigger = {
 						OR = {
 							diplomacy >= scope:bully.diplomacy
-							martial >= scope:bully.martial
+							prowess >= scope:bully.prowess
 						}
 						exists = scope:bully
 					}
@@ -2535,7 +2573,7 @@ childhood.1001 = {
 			save_temporary_scope_as = bully_check
 		}
 		OR = {
-			martial >= scope:bully_check.martial
+			prowess >= scope:bully_check.prowess
 			diplomacy >= scope:bully_check.diplomacy
 		}
 	}
@@ -5652,6 +5690,11 @@ childhood.1015 = {
 					}
 				}
 			}
+		
+		stress_impact = {
+			pensive = minor_stress_impact_gain
+			curious = minor_stress_impact_gain
+			humble = minor_stress_impact_gain
 		}
 		ai_chance = {
 			base = 10
@@ -6502,6 +6545,10 @@ childhood.1018 = {
 							}
 						}
 					}
+					stress_impact = {
+						just = minor_stress_impact_gain
+						honest = minor_stress_impact_gain
+					}
 					if = {
 						limit = {
 							OR = {
@@ -6577,8 +6624,10 @@ childhood.1018 = {
 # by Linnéa Thimrén
 scripted_trigger childhood_1019_relation_trigger = {
 	has_same_focus_as = root
-	is_ai = yes
-	is_in_the_same_court_as_or_guest = root
+	is_available_ai_child = yes
+	exists = top_liege
+	exists = root.top_liege
+	top_liege = root.top_liege
 }
 
 # TRICK OR TRAIT
@@ -6587,7 +6636,18 @@ childhood.1019 = {
 	title = childhood.1019.t
 	desc = childhood.1019.desc
 	theme = education
-	left_portrait = scope:study_friend
+	
+	left_portrait = {
+		character = root
+		animation = throne_room_writer
+	}
+	right_portrait = {
+		character = scope:study_friend
+		animation = happiness
+	}
+	lower_right_portrait = scope:educator
+	
+	cooldown = { years = 5 }
 	
 	trigger = {
 		or = {
@@ -6604,19 +6664,15 @@ childhood.1019 = {
 				childhood_1019_relation_trigger = yes
 			}
 		}
-		liege = { is_ai = yes }
-		OR = {
-			NOT = { any_relation = { type = guardian always = yes } }
-			any_relation = { type = guardian is_ai = yes }
+		any_relation = { type = guardian count >= 1 }
+		exists = location.county.holder.top_liege
+		location.county.holder.top_liege = {
+			any_vassal_or_below = {
+				is_available_ai_adult = yes
+				any_held_title = {
+					tier = tier_county
 		}
-		NOT = { has_character_flag = had_event_childhood_1019 }
 	}
-
-	weight_multiplier = {
-		base = 1
-		modifier = {
-			add = 0.5
-			has_focus = education_learning
 		}
 	}
 
