@@ -1,4 +1,6 @@
-﻿parent_has_genetic_trait = {
+﻿ToT_is_loadd = { always = yes }
+
+parent_has_genetic_trait = {
 	OR = {
 		trigger_if = {
 			limit = { exists = mother }

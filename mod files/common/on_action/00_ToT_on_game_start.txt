@@ -1,4 +1,17 @@
-﻿on_game_start_after_lobby = {
+﻿on_game_start = {
+	on_actions = {
+		ToT_compat
+	}
+}
+
+ToT_compat = {
+	effect = {
+		set_global_variable = ToT_is_loaded
+	}
+}
+
+
+on_game_start_after_lobby = {
 	on_actions = {
 		on_game_start_trick_or_trait
 	}
